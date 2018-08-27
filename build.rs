@@ -24,24 +24,24 @@ fn main() {
     let wide = cfg!(all(feature = "wide", not(target_os = "macos")));
 
     let ncurses_lib = if wide {
-        find_library(&["ncursesw5", "ncursesw"])
+        find_library(&["ncursesw5"])
     } else {
-        find_library(&["ncurses5", "ncurses"])
+        find_library(&["ncurses5"])
     };
 
     if cfg!(feature = "menu") {
         if wide {
-            find_library(&["menuw5", "menuw"]);
+            find_library(&["menuw5"]);
         } else {
-            find_library(&["menu5", "menu"]);
+            find_library(&["menu5"]);
         }
     }
 
     if cfg!(feature = "panel") {
         if wide {
-            find_library(&["panelw5", "panelw"]);
+            find_library(&["panelw5"]);
         } else {
-            find_library(&["panel5", "panel"]);
+            find_library(&["panel5"]);
         }
     }
 
