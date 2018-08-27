@@ -20,7 +20,7 @@ all: ${LIB} ${EXAMPLES_BIN}
 
 lib: ${LIB}
 
-link-ncursesw: CFG_OPT = --cfg ncursesw
+link-ncursesw: CFG_OPT = --cfg ncursesw5
 link-ncursesw: all
 
 ${LIB}: ${LIB_DEPS}
